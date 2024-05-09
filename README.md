@@ -12,8 +12,6 @@ This project is a NestJS application that connects to the public API of HackerNe
 - [Running the Application](#running-the-application)
 - [API Endpoints](#api-endpoints)
 - [Testing](#testing)
-- [Troubleshooting](#troubleshooting)
-- [Contributing](#contributing)
 - [License](#license)
 
 ## Requirements
