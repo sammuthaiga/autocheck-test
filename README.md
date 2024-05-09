@@ -9,6 +9,8 @@ This project is a NestJS application that connects to the public API of HackerNe
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Configuration](#configuration)
+- [Dependencies](#dependencies)
+- [Resources](#resources)
 - [Running the Application](#running-the-application)
 - [API Endpoints](#api-endpoints)
 - [Testing](#testing)
@@ -40,12 +42,31 @@ This project is a NestJS application that connects to the public API of HackerNe
 
 1. **Create a `.env` file**:
     - Create a file named `.env` in the root directory of the project.
-    - Add any required environment variables such as the base URL of the HackerNews API.
+    - Add any required environment variables, such as the base URL of the HackerNews API.
 
     Example:
     ```plaintext
     BASE_URL=https://hacker-news.firebaseio.com/v0
     ```
+
+## Dependencies
+
+The project uses the following main dependencies:
+
+- **[@nestjs/axios](https://www.npmjs.com/package/@nestjs/axios)**: Axios integration for NestJS.
+- **[@nestjs/common](https://www.npmjs.com/package/@nestjs/common)**: Common functionalities for NestJS applications.
+- **[@nestjs/core](https://www.npmjs.com/package/@nestjs/core)**: The core module for NestJS applications.
+- **[@nestjs/mapped-types](https://www.npmjs.com/package/@nestjs/mapped-types)**: Helps in type mapping within NestJS.
+- **[@nestjs/platform-express](https://www.npmjs.com/package/@nestjs/platform-express)**: NestJS integration with the Express framework.
+- **[class-transformer](https://www.npmjs.com/package/class-transformer)**: Helps with data transformation and validation.
+- **[class-validator](https://www.npmjs.com/package/class-validator)**: Provides validation decorators for class properties.
+
+## Resources
+
+The application leverages the following resources:
+
+- [HackerNews API](https://github.com/HackerNews/API): Used to fetch data and perform various calculations.
+- [Firebase client libraries](https://firebase.google.com/docs/web/setup): For interacting with the HackerNews API.
 
 ## Running the Application
 
@@ -76,25 +97,39 @@ The application provides the following API endpoints:
     - `GET /hackernews/top10-last25`
     - Description: Fetches the top 10 most occurring words in the titles of the last 25 stories from HackerNews.
 
-- **Top 10 most occurring words in the titles of the posts from exactly the last week**:
+- **Top 10 most occurring words in the titles of the posts from the last week**:
     - `GET /hackernews/top10-lastweek`
     - Description: Fetches the top 10 most occurring words in the titles of posts from the last week from HackerNews.
 
 - **Top 10 most occurring words in the titles of the last 600 stories of users with at least 10,000 karma**:
     - `GET /hackernews/top10-highkarma`
     - Description: Fetches the top 10 most occurring words in the titles of the last 600 stories of users with at least 10,000 karma.
+
 ## Testing Endpoints with a Browser Client
+
 **Using Postman:**
 
-1. Install Postman (https://www.getpostman.com/) if you haven't already.
+1. Install Postman from [here](https://www.getpostman.com/).
 2. Create a new **GET** request.
-3. Set the request URL to `http://localhost:3000/top-words/last-25` to hit the first endpoint -Top 10 most occurring words in the titles of the last 25 stories
-4. Set the request URL to `http://localhost:3000/last-week` to hit the second endpoint - Top 10 most occurring words in the titles of the post of exactly the last week 3.
-5. Set the request URL to `http://localhost:3000/high-karma` to hit the third endpoint  -Top 10 most occurring words in titles of the last 600 stories of users with at least
-10.000 karma.
-4. Send the request.
-5. Postman will display the response in JSON FORMART from the API endpoints, containing the top 10 most occurring words in the titles respective to each endpoint requirements.
+3. Set the request URL to the desired API endpoint:
 
+    - For the top 10 most occurring words in the last 25 stories:
+        ```plaintext
+        http://localhost:3000/hackernews/top10-last25
+        ```
+
+    - For the top 10 most occurring words in the last week:
+        ```plaintext
+        http://localhost:3000/hackernews/top10-lastweek
+        ```
+
+    - For the top 10 most occurring words in the last 600 stories of users with high karma:
+        ```plaintext
+        http://localhost:3000/hackernews/top10-highkarma
+        ```
+
+4. Send the request.
+5. Postman will display the response in JSON format from the API endpoints, containing the top 10 most occurring words in the titles respective to each endpoint requirement.
 
 ## Testing
 
@@ -102,3 +137,4 @@ To run the tests for the application, use the following command:
 
 ```bash
 npm test
+```
