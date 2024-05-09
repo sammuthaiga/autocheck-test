@@ -89,8 +89,8 @@ The application provides the following API endpoints:
 1. Install Postman (https://www.getpostman.com/) if you haven't already.
 2. Create a new **GET** request.
 3. Set the request URL to `http://localhost:3000/top-words/last-25` to hit the first endpoint -Top 10 most occurring words in the titles of the last 25 stories
-Set the request URL to `http://localhost:3000/last-week` to hit the second endpoint - Top 10 most occurring words in the titles of the post of exactly the last week 3.
-Set the request URL to `http://localhost:3000/high-karma` to hit the third endpoint  -Top 10 most occurring words in titles of the last 600 stories of users with at least
+4. Set the request URL to `http://localhost:3000/last-week` to hit the second endpoint - Top 10 most occurring words in the titles of the post of exactly the last week 3.
+5. Set the request URL to `http://localhost:3000/high-karma` to hit the third endpoint  -Top 10 most occurring words in titles of the last 600 stories of users with at least
 10.000 karma.
 4. Send the request.
 5. Postman will display the response in JSON FORMART from the API endpoints, containing the top 10 most occurring words in the titles respective to each endpoint requirements.
