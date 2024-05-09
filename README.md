@@ -14,7 +14,7 @@ This project is a NestJS application that connects to the public API of HackerNe
 - [Running the Application](#running-the-application)
 - [API Endpoints](#api-endpoints)
 - [Testing](#testing)
-- [License](#license)
+
 
 ## Requirements
 
@@ -74,7 +74,7 @@ Additional dependencies are included for data transformation and validation:
 The application leverages the following resources:
 
 - **[HackerNews API](https://github.com/HackerNews/API)**: Used to fetch data on stories and perform analyses.
-- **[Firebase client libraries](https://firebase.google.com/docs/web/setup)** (if applicable): May be used for interacting with the HackerNews API depending on its specific implementation.
+- **[Firebase client libraries](https://firebase.google.com/docs/web/setup)** interacting with the HackerNews API depending on its specific implementation.
 
 ## Running the Application
 
@@ -90,12 +90,6 @@ To run the application, use one of the following commands:
 
     ```bash
     npm run start:prod
-    ```
-
-- **Watch mode**:
-
-    ```bash
-    npm run start:watch
     ```
 
 The application will be available at `http://localhost:3000`.
