@@ -4,6 +4,6 @@ import { HighKarmaController } from './high-karma.controller';
 
 @Module({
   providers: [HighKarmaService],
-  controllers: [HighKarmaController]
+  controllers: [HighKarmaController],
 })
 export class HighKarmaModule {}
