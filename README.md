@@ -26,7 +26,7 @@ This project is a NestJS application that connects to the public API of HackerNe
 1. **Clone the repository**:
 
     ```bash
-    git clone https://github.com/sammuthaiga/autocheck-test/tree/main
+    git clone git@github.com:sammuthaiga/autocheck-test.git
     ```
 
 2. **Navigate to the project directory**:
