@@ -1,5 +1,7 @@
 # HackerNews API
 
+By Samuel M. Muthaiga
+
 This project is a NestJS application that connects to the public API of HackerNews. It provides endpoints to fetch data and perform calculations on the top 10 most occurring words in the titles of different sets of stories from HackerNews.
 
 ## Table of Contents
