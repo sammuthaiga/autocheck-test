@@ -90,16 +90,3 @@ To run the tests for the application, use the following command:
 
 ```bash
 npm test
-
-### Notes:
-
-- **Repository URL**:
-    - Replace `<repository-url>` with the URL of your repository.
-
-- **Environment Variables**:
-    - Customize the `.env` example as needed based on your application.
-
-- **License**:
-    - Customize the license information based on your project requirements.
-
-By providing detailed information and clear instructions, this `README.md` file should help any developer get your application up and running easily. Adjust the content as necessary to fit your project. Let me know if you need further guidance.
