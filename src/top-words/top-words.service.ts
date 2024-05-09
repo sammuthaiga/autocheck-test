@@ -6,7 +6,8 @@ import { mergeMap, map, toArray } from 'rxjs/operators';
 
 @Injectable()
 export class TopWordsService {
-  private readonly apiUrl: string = process.env.HACKER_NEWS_API_URL; // Load API URL from .env
+  private readonly apiUrl: string =
+    process.env.HACKER_NEWS_API_URL || 'https://hacker-news.firebaseio.com/v0'; // Load API URL from .env
 
   /**
    * Fetches the last 25 stories and calculates the top 10 most occurring words in the titles.
